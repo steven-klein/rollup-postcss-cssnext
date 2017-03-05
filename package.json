@@ -9,7 +9,7 @@
         "clean": "npm-run-all --serial clean:**",
         "clean:build": "del-cli build",
         "copy": "npm-run-all --parallel copy:**",
-        "copy:img": "copy 'src/img/**/*.+(jpg|jpeg|gif|png|svg)' build/img",
+        "copy:img": "copy 'src/img/**/*.+(jpg|gif|png|svg)' build/img",
         "css": "postcss -c postcss.config.js",
         "js": "rollup -c rollup.config.js",
         "postversion": "git push && git push --tags",
