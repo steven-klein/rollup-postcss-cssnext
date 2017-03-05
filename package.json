@@ -1,0 +1,46 @@
+{
+    "name": "rollup-postcss-cssnext",
+    "description": "An NPM scripts workflow for bundling Javascript with Rollup and Buble, and bundling CSS with PostCSS and CSSNext, plus cross platform copying of static assets with npm copy.",
+    "author": "Steven Klein <steven.p.klein@gmail.com>",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "npm-run-all --serial clean --parallel copy js css",
+        "dev": "npm run watch",
+        "clean": "npm-run-all --serial clean:**",
+        "clean:build": "del-cli build",
+        "copy": "npm-run-all --parallel copy:**",
+        "copy:img": "copy 'src/img/**/*.+(jpg|jpeg|gif|png|svg)' build/img",
+        "css": "postcss -c postcss.config.js",
+        "js": "rollup -c rollup.config.js",
+        "postversion": "git push && git push --tags",
+        "test": "cross-env NODE_ENV=production npm run build",
+        "watch": "npm-run-all build --parallel \"js -- --watch\" \"css -- --watch\""
+    },
+    "devDependencies": {
+        "copy": "^0.3.0",
+        "cross-env": "^3.1.4",
+        "cssnano": "^3.9.1",
+        "del-cli": "^0.2.1",
+        "npm-run-all": "^4.0.0",
+        "postcss": "^5.2.8",
+        "postcss-browser-reporter": "^0.5.0",
+        "postcss-cli": "^2.6.0",
+        "postcss-cssnext": "^2.9.0",
+        "postcss-import": "^9.0.0",
+        "postcss-reporter": "^3.0.0",
+        "rollup": "^0.39.2",
+        "rollup-plugin-buble": "^0.15.0",
+        "rollup-plugin-commonjs": "^7.0.0",
+        "rollup-plugin-includepaths": "^0.1.8",
+        "rollup-plugin-node-resolve": "^2.0.0",
+        "rollup-plugin-replace": "^1.1.1",
+        "rollup-plugin-uglify": "^1.0.1",
+        "rollup-watch": "^3.1.0"
+    },
+    "browserslist": [
+        "last 2 versions"
+    ],
+    "engines": {
+        "node": ">=4.0.0"
+    }
+}

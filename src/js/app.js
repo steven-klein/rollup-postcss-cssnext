@@ -1,0 +1,4 @@
+/**
+ * app.js
+ */
+import "test"
