@@ -1,23 +1,24 @@
 {
     "name": "rollup-postcss-cssnext",
-    "description": "An NPM scripts workflow for bundling Javascript with Rollup and Buble, and bundling CSS with PostCSS and CSSNext, plus cross platform copying of static assets with npm copy.",
-    "author": "Steven Klein <steven.p.klein@gmail.com>",
     "version": "1.0.0",
+    "description": "An NPM scripts workflow for bundling Javascript with Rollup and Buble, and bundling CSS with PostCSS and CSSNext, and copying of static assets with cpx.",
+    "author": "Steven Klein <steven.p.klein@gmail.com>",
+    "license": "MIT",
     "scripts": {
         "build": "npm-run-all --serial clean --parallel copy js css",
         "dev": "npm run watch",
         "clean": "npm-run-all --serial clean:**",
         "clean:build": "del-cli build",
         "copy": "npm-run-all --parallel copy:**",
-        "copy:img": "copy 'src/img/**/*.+(jpg|gif|png|svg)' build/img",
+        "copy:img": "cpx \"src/img/**/*.{jpg,gif,png,svg}\" build/img",
         "css": "postcss -c postcss.config.js",
         "js": "rollup -c rollup.config.js",
         "postversion": "git push && git push --tags",
         "test": "cross-env NODE_ENV=production npm run build",
-        "watch": "npm-run-all build --parallel \"js -- --watch\" \"css -- --watch\""
+        "watch": "npm-run-all build --parallel \"js -- --watch\" \"css -- --watch\" \"copy:img -- --watch\""
     },
     "devDependencies": {
-        "copy": "^0.3.0",
+        "cpx": "^1.5.0",
         "cross-env": "^3.1.4",
         "cssnano": "^3.9.1",
         "del-cli": "^0.2.1",
