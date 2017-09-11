@@ -15,9 +15,11 @@
     "js": "rollup -c rollup.config.js",
     "postversion": "git push && git push --tags",
     "test": "cross-env NODE_ENV=production npm run build",
-    "watch": "npm-run-all build --parallel \"js -- --watch\" \"css -- --watch\" \"copy:img -- --watch\""
+    "serve": "browser-sync start -c browsersync.config.js",
+    "watch": "npm-run-all build --parallel \"js -- --watch\" \"css -- --watch\" \"copy:img -- --watch\" serve"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "cpx": "^1.5.0",
     "cross-env": "^3.1.4",
     "cssnano": "^3.9.1",
