@@ -1,6 +1,6 @@
 {
   "name": "rollup-postcss-cssnext",
-  "version": "2.0.4",
+  "version": "2.1.4",
   "description": "An NPM scripts workflow for bundling Javascript with Rollup and Buble, and bundling CSS with PostCSS and CSSNext, and copying of static assets with cpx.",
   "author": "Steven Klein <steven.p.klein@gmail.com>",
   "license": "MIT",
