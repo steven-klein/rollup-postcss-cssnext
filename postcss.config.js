@@ -25,7 +25,7 @@ module.exports = ({env}) => ({
     },
     "postcss-url": [
       {
-        filter: '**/node_modules/**', // node_module assets
+        filter: "**/node_modules/**", // node_module assets
         url: "inline",
         ignoreFragmentWarning: true,
         maxSize: 1, // KB
@@ -54,6 +54,11 @@ module.exports = ({env}) => ({
       "autoprefixer": false // handled by postcss-preset-env
     } : false,
     "postcss-browser-reporter": (env !== "production") ? true : false,
-    "postcss-reporter": (env !== "production") ? true : false
+    "postcss-reporter": (env !== "production") ? true : false,
+    "postcss-hash": (env === "production") ? {
+      algorithm: "sha256",
+      trim: 8,
+      manifest: path.resolve(process.cwd(), `${process.env.npm_package_config_paths_dest}/manifest.json`)
+    } : false
   }
 })

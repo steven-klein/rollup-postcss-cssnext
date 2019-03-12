@@ -2969,6 +2969,14 @@ postcss-gap-properties@^2.0.0:
   dependencies:
     postcss "^7.0.2"
 
+postcss-hash@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-hash/-/postcss-hash-1.0.2.tgz#f6a0bdc0f018f8781d142e89c41439dac284b58e"
+  integrity sha512-HCeUkA870GS7tDF9ejnghckduEFesUjlABtWlXWwO10/8uy5lBWyyxZBFM9Q0ceQSV4FwlyAvlNabC/tqHzaZg==
+  dependencies:
+    mkdirp "^0.5.1"
+    postcss "^7.0.2"
+
 postcss-image-set-function@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/postcss-image-set-function/-/postcss-image-set-function-3.0.1.tgz#28920a2f29945bed4c3198d7df6496d410d3f288"
@@ -4099,6 +4107,11 @@ term-size@^1.2.0:
   integrity sha1-RYuDiH8oj8Vtb/+/rSYuJmOO+mk=
   dependencies:
     execa "^0.7.0"
+
+the-answer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/the-answer/-/the-answer-1.0.0.tgz#6dbc4c9db469d4f437120b09e44700fc320f170b"
+  integrity sha1-bbxMnbRp1PQ3EgsJ5EcA/DIPFws=
 
 timed-out@^4.0.0:
   version "4.0.1"
