@@ -2,7 +2,7 @@
 
 > An NPM scripts workflow for bundling Javascript with Rollup and Buble, and bundling CSS with PostCSS and CSSNext, plus copying of static assets with cpx.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/7kki7pxy5t55qudi/branch/master?svg=true)](https://ci.appveyor.com/project/steven-klein/rollup-postcss-cssnext/branch/master)
+[![CircleCI](https://circleci.com/gh/steven-klein/rollup-postcss-cssnext.svg?style=svg)](https://circleci.com/gh/steven-klein/rollup-postcss-cssnext)
 [![GitHub version](https://badge.fury.io/gh/steven-klein%2Frollup-postcss-cssnext.svg)](https://badge.fury.io/gh/steven-klein%2Frollup-postcss-cssnext)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
